@@ -18,3 +18,9 @@ classroom = [row1, row2, row3]
 
 count : (s : Students) -> Int
 count s = sum (map sum s)
+
+sumTree : (xs : Row) -> Int
+sumTree xs = foldl (+) 0 xs
+
+countTree : (s : Students) -> Int
+countTree s = sumTree (map sumTree s)

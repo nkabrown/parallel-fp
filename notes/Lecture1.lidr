@@ -9,3 +9,24 @@ We can represent the students as a List of Ints where those students who did not
 
 > Students : Type
 > Students = List Row
+
+We represent each row of students as a list of integers.
+
+>row1 : Row
+>row1 = [1, 0, 1]
+
+>row2 : Row
+>row2 = [0, 1, 1]
+
+>row3 : Row
+>row3 = [0, 0, 1]
+
+To represent a group of students as a compound data structure we can form a list of lists.
+
+>classroom : Students
+>classroom = [row1, row2, row3]
+
+Write a parallel functional program to compute the number of students who took the course prerequisite.
+
+>count : (s : Students) -> Int
+>count s = sum (map sum s)
